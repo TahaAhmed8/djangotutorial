@@ -26,7 +26,11 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'djangotutorial-production-b7a2.up.railway.app',
+]
 CSRF_TRUSTED_ORIGINS = [
     'https://djangotutorial-production-b7a2.up.railway.app',
 ]
